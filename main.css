@@ -1,0 +1,261 @@
+:root {
+  --primary-color: #ec1f55;
+  --text-color: #333;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+body {
+  background-image: url('https://vikdang.github.io/Code_web_music_player/assets/img/themeBgs/listTheme1/theme1.svg');
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.material-symbols-outlined{
+  position:absolute;
+  padding-top:5px;
+  right:300px;
+  width:20px;
+  height:30px;
+  background-color: #999;
+  cursor: pointer;
+}
+.material-symbols-outlined:hover{
+  background-color: pink;
+}
+.search-element{
+  width:300px;
+  height:30px;
+  position: absolute;
+  right:20px;
+  top:20px;
+}
+.input{
+  width:270px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius:30px;
+  color:pink;
+}
+::placeholder{
+  color:white;
+}
+.Ha-img{
+  position: absolute;
+  border:50px;
+  width:50px;
+  border-radius: 50px;
+  left:600px;
+  top:20px;
+}
+.title-img{
+  position: absolute;
+  left:540px;
+  top:100px;
+  color:white;
+  font-size:20px;
+}
+.middle-list{
+  display: flex;
+  position: absolute;
+  top:150px;
+  left:50px;
+  width:1150px;
+  height:20px;
+  border-radius: 20px;
+  background-color: rgba(0,0,0,0.2);
+}
+.middle-item{
+  text-decoration: none;
+  list-style: none;
+  width:100px;
+  height: 20px;
+  margin-left:60px;
+  color:white;
+  text-align: center;
+}
+.color-item{
+  border-radius:20px;
+  background-color: pink;
+}
+
+.player {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.player .icon-pause {
+  display: none;
+}
+
+.player.playing .icon-pause {
+  display: inline-block;
+}
+
+.player.playing .icon-play {
+  display: none;
+}
+
+.dashboard {
+  padding: 16px 16px 14px;
+  background-color: #fff;
+  position: fixed;
+  left:0px;
+  top: 200px;
+  width: 100%;
+  max-width: 300px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+header h4 {
+  color: var(--primary-color);
+  font-size: 12px;
+}
+
+header h2 {
+  color: var(--text-color);
+  font-size: 20px;
+}
+
+/* CD */
+.cd {
+  display: flex;
+  margin: auto;
+  width: 200px;
+}
+
+.cd-thumb {
+  width: 100%;
+  padding-top: 100%;
+  border-radius: 50%;
+  background-color: #333;
+  background-size: cover;
+  margin: auto;
+}
+
+/* CONTROL */
+.control {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 18px 0 8px 0;
+}
+
+.control .btn {
+  color: #666;
+  padding: 18px;
+  font-size: 18px;
+}
+
+.control .btn.active {
+  color: var(--primary-color);
+}
+
+.control .btn-toggle-play {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  font-size: 24px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+}
+
+.progress {
+  width: 100%;
+  -webkit-appearance: none;
+  height: 6px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 6px;
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+/* PLAYLIST */
+.playlist {
+  margin-top: 200px;
+  padding: 12px;
+}
+
+.song {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  background-color: #fff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.song.active {
+  background-color: var(--primary-color);
+}
+
+.song:active {
+  opacity: 0.8;
+}
+
+.song.active .option,
+.song.active .author,
+.song.active .title {
+  color: #fff;
+}
+
+.song .thumb {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-size: cover;
+  margin: 0 8px;
+}
+
+.song .body {
+  flex: 1;
+  padding: 0 16px;
+}
+
+.song .title {
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+.song .author {
+  font-size: 12px;
+  color: #999;
+}
+
+.song .option {
+  padding: 16px 8px;
+  color: #999;
+  font-size: 18px;
+}
+
+.song .playlist-bar {
+  display: flex;
+}
